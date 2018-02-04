@@ -1,10 +1,11 @@
 from django.shortcuts import render
+from django.views.generic.base import TemplateView
 
-class MainApp():
-
-    def main_page(request):
-        context = {
-            'title': 'Recruitment App.',
-            'message': 'Greetings in our Lord and Savior!'
-        }
-        return render(request, 'index.html', context)
+class HomePageView(TemplateView):
+    template_name = 'index.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Recruitment App.'
+        context['message'] = 'Greetings in our Lord and Savior!'
+        return context

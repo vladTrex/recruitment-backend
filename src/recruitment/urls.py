@@ -1,8 +1,8 @@
 from django.conf.urls import url
 from django.contrib import admin
-from .views import MainApp
+from .views import HomePageView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', MainApp.main_page, name='main_page')
+    url(r'^$', HomePageView.as_view(), name='main_page')
 ]
