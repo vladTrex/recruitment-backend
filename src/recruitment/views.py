@@ -9,3 +9,5 @@ class HomePageView(TemplateView):
         context['title'] = 'Recruitment App.'
         context['message'] = 'Greetings in our Lord and Savior!'
         return context
+class ContactView(TemplateView):
+    template_name = 'about.html'
