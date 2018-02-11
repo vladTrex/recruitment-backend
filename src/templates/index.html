@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-
-<h2> {{ title }} </h2>
-<p> {{ message }} </p>
+<h2> <i class="glyphicon glyphicon-tower"></i> {{ title }} </h2>
+<a class="btn btn-primary" href="{% url 'about_page' %}">About Us</a>
+<a class="btn btn-primary">Add some vacancies</a>
+<h3> {{ message }} </h3>
 <p id="js-message"></p>
-
-<a href="{% url 'about_page' %}">About Us</a>
-
 {% endblock %}
