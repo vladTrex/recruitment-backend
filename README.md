@@ -12,7 +12,7 @@
 4. cd venv/Scripts
 5. activate.bat (и возвращаемся в корень проекта)
 6. cd src/
-7. pip install -r requirements.txt (переходим в дочернюю директорию asclepius)
+7. pip install -r requirements.txt
 8. python manage.py migrate
 9. python manage.py createsuperuser (создаем пользователя)
 10. python manage.py runserver
