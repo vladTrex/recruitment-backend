@@ -3,6 +3,8 @@ bin/
 include/
 pip-selfcheck.json
 ./vscode
+.vscode/*
+!.vscode/settings.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
