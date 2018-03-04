@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Vacancy
+from .models import Vacancy, Category
 
 class VacancySerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,4 +16,12 @@ class VacancySerializer(serializers.ModelSerializer):
         if qs.exists():
             raise serializers.ValidationError("The title must be unique")
         return value
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = [
+            'title'
+        ]
+
 

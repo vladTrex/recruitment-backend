@@ -2,9 +2,6 @@
 bin/
 include/
 pip-selfcheck.json
-./vscode
-.vscode/*
-!.vscode/settings.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -13,7 +10,11 @@ __pycache__/
 
 # C extensions
 *.so
-*.sqlite3
+*.log
+*.sql
+*.sqlite
+.vscode/
+settings.json
 
 # Distribution / packaging
 .Python
