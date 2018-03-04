@@ -10,3 +10,10 @@ class VacancyRetrieveView(generics.RetrieveUpdateDestroyAPIView):
     def get_queryset(self):
         return Vacancy.objects.all()
 
+class VacancyCreateView(generics.CreateAPIView):
+    lookup_field = 'pk'
+    serializer_class = VacancySerializer
+
+    def get_queryset(self):
+        return Vacancy.objects.all()
+

@@ -9,4 +9,11 @@ class VacancySerializer(serializers.ModelSerializer):
             'title',
             'description'
         ]
+        read_only_fields = ['pk']
+
+    def validate_title(self, value):
+        qs = Vacancy.objects.filter(title__iexact=value)
+        if qs.exists():
+            raise serializers.ValidationError("The title must be unique")
+        return value
 
