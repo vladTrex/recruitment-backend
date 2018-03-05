@@ -1,0 +1,1 @@
+NO_CATEGORY_ID = int(1)
