@@ -10,6 +10,7 @@ class Category(models.Model):
 class Vacancy(models.Model):
     title = models.CharField(max_length=120)
     description = models.TextField()
+    added_at = models.DateTimeField(auto_now_add=True, blank=True)
     category = models.ForeignKey(Category, default=NO_CATEGORY_ID)
 
     def __str__(self):

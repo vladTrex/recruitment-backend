@@ -9,9 +9,10 @@ class VacancySerializer(serializers.ModelSerializer):
             'title',
             'description',
             'category',
-            'category_title'
+            'category_title',
+            'added_at'
         ]
-        read_only_fields = ['pk']
+        read_only_fields = ['pk', 'added_at']
 
     def validate_title(self, value):
         qs = Vacancy.objects.filter(title__iexact=value)
