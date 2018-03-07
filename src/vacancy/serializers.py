@@ -8,7 +8,8 @@ class VacancySerializer(serializers.ModelSerializer):
             'pk',
             'title',
             'description',
-            'category'
+            'category',
+            'category_title'
         ]
         read_only_fields = ['pk']
 
