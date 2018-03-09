@@ -1,4 +1,6 @@
 from django.db import models
+from rest_framework import reverse
+
 from .const import NO_CATEGORY_ID
 
 class Category(models.Model):
@@ -19,3 +21,6 @@ class Vacancy(models.Model):
     @property
     def category_title(self):
         return str(self.category.title)
+    
+    # def get_api_url(self):
+    #     return reverse('api-vacancies:vacancy', kwargs={'pk': self.pk})
